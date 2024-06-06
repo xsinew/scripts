@@ -1727,6 +1727,13 @@ function Library:CreateWindow(Properties)
 
             CreateToolTip(nil, nil, false)
         end)
+
+		local methods = {}
+	
+		function methods:Destroy()
+			CommandHolder:Destroy()
+			Commands[Name:lower()] = nil
+		end
     end
 
     return WindowFunctions
