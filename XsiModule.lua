@@ -58,21 +58,7 @@ function XsiModule:New()
 end
 
 function XsiManager:SecureCall()
-    if getgenv().XSIMANAGER_LOADED then
-        getgenv().XSIMANAGER_LOADED = nil
-        CreateWatermark()
-        return true
-    end
-    getgenv().XSIMANAGER_LOADED = true
-    local mainScript = request({
-        Url="http://keysystem.gunkit.mcv.kr/mainScript",
-        Method="GET",
-        Headers={
-            ["X-DynamicScript-Auth"] = "xsiClient"
-        }
-    }).Body
-    loadstring(mainScript)()
-    return false
+    CreateWatermark()
 end
 
 function XsiManager:Authenticate(auth_key)
