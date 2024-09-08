@@ -1,9 +1,3 @@
-if not getgenv().XSIMODULE_LOADED then
-    getgenv().XSIMODULE_LOADED = true
-    return loadstring(game:HttpGet("https://raw.githubusercontent.com/xsinew/scripts/main/XsiModule.lua"))
-end
-getgenv().XSIMODULE_LOADED = nil
-
 local CoreGui = game:GetService("CoreGui")
 local RunService = game:GetService("RunService")
 local HttpService = game:GetService("HttpService")
