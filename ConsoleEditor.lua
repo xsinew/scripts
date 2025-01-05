@@ -78,6 +78,7 @@ function console_progress.new()
         end
     end)
     self.updater = coroutine.create(function()
+        print(self.check_content)
         while task.wait() do
             if self.message_object then
                 task.spawn(function() xpcall(function() self.message_object.image.Image = self.icon end,function() self.message_object = nil end) end)
