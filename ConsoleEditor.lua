@@ -8,11 +8,11 @@ console_progress.preset = {
     };
     ["warn"] = {
         Color = Color3.new(1,1,0);
-        Icon = "rbxasset://texture/DevConsole/Warning.png";
+        Icon = "rbxasset://textures/DevConsole/Warning.png";
     };
     ["error"] = {
         Color = Color3.new(1,0,0);
-        Icon = "rbxasset://texture/DevConsole/Error.png";
+        Icon = "rbxasset://textures/DevConsole/Error.png";
     };
 }
 
@@ -50,7 +50,7 @@ function console_progress.new()
     end
     self.setPreset = function(self,name,preset_data)
         assert(name and preset_data and typeof(preset_data) == "table" and preset_data["Color"] and preset_data["Icon"], "Error Arguments")
-        self[name] = function(self, content)
+        self[name] = function(self,content)
             self:setMessage(content or "")
             self:setColor(preset_data["Color"])
             self:setIcon(preset_data["Icon"])
