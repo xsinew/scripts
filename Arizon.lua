@@ -315,7 +315,6 @@
             textBox1.BackgroundTransparency = 1
             textBox1.Position = UDim2.fromScale(-0.00264, 0)
             textBox1.Size = UDim2.fromOffset(361, 36)
-            textBox1.ClipsDescendants = true
 
             local uIPadding1 = Instance.new("UIPadding")
             uIPadding1.Name = "uIPadding1"
@@ -404,6 +403,7 @@
                     textbox.BackgroundColor3 = Color3.fromRGB(32, 32, 32)
                     textbox.Position = UDim2.fromScale(0, 0.36)
                     textbox.Size = UDim2.fromOffset(342, 32)
+                    textBox.ClipsDescendants = true
 
                     local uICorner2 = Instance.new("UICorner")
                     uICorner2.Name = "uICorner2"
