@@ -403,7 +403,6 @@
                     textbox.BackgroundColor3 = Color3.fromRGB(32, 32, 32)
                     textbox.Position = UDim2.fromScale(0, 0.36)
                     textbox.Size = UDim2.fromOffset(342, 32)
-                    textBox.ClipsDescendants = true
 
                     local uICorner2 = Instance.new("UICorner")
                     uICorner2.Name = "uICorner2"
@@ -457,6 +456,7 @@
                     textBox.Position = UDim2.fromScale(-0.418, 0)
                     textBox.Size = UDim2.fromOffset(95, 25)
                     textBox.Parent = status
+                    textBox.ClipsDescendants = true
 
                     status.Parent = textbox
 
